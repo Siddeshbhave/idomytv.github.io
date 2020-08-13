@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>IDO</title>
+
+ <!-- nav -->
+      <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- nav -->
+
+
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+  <title>IDO</title>
+</head>
+
+<style>
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+/*.w3-button {
+  padding: 0px 16px;
+}
+*/
+/*TABS*/
+*{
+  margin:0;
+  padding:0;
+}
+
+/*hiding label and checkbox*/
+input[type=checkbox],
+.show-menu{
+  visibility: visible;
+  opacity: 5;
+  color: transparent;
+}
+
+/*styling our wrapper*/
+.tabs{
+  max-width:960px;
+  margin:0 auto;
+  color:#ecf0f1;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*styling h1 in wrapper*/
+.tabs h1{
+  padding:20px;
+  text-align:center;
+}
+
+/*styling navigation*/
+.navigation{
+  display:flex;
+  list-style-type:none;
+}
+
+/*styling list items->li in navigation*/
+.navigation li{
+  background:#29292A;
+  flex:1;
+  text-align:center;
+  transition:all .2s ease;
+}
+
+/*giving border left to all list items, but not to our first list item*/
+.navigation li:not(:first-child){
+  border-left:1px solid #ecf0f1;
+}
+
+/*styling hover*/
+.navigation li:hover{
+  background:#333333;
+  flex:1.1;
+}
+
+/*styling our anchor tag*/
+.navigation li a{
+  display:block;
+  padding:20px 0;
+  color:inherit;
+  text-decoration:none;
+}
+
+
+
+/*giving style for mobile*/
+
+@media screen and (max-width:600px){
+  /*styling our show menu button*/
+  .show-menu{
+    background:#342a2a;
+    color: white;
+    display:flex;
+    cursor:pointer;
+    padding: 20px 0;
+    justify-content:center;
+    margin-right: 35%;
+    margin-top: 2%;
+    width: 100%;
+    opacity: 0.7;
+  }
+  /*hiding our navigation*/
+  .navigation{
+    display:none;
+  }
+
+  /*displaying our list items as block element; if checkbox is check*/
+  input[type=checkbox]:checked ~ .navigation{
+    display:block;
+  }
+
+  /*removing border left from the pseudo class*/
+  .navigation li:not(:first-child){
+    border:0;
+  }
+  /*giving margin to list item, excluding last list item*/
+  .navigation li:not(:last-child){
+    margin:2px 0;
+  }
+}
+
+
+
+
+
+/*paris_table*/
+.tab_container{
+  overflow-x: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.tab_container table{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.tab_container th{
+  background-color: #29292A;
+  color: white;
+}
+
+.tab_container th,td{
+  border: 2px solid #ddd;
+  padding: 15px;
+}
+
+@media screen and (max-width:600px){
+
+.tab_container{
+  padding-top: 17%;
+  margin-left: 10px;
+}
+
+}
+
+
+
+/*ORDER BUTTON 5*/
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 200px;
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.button5:clicked
+{
+  background: grey;
+  color: white;
+}
+
+.button5:active{
+    background:grey;
+}
+
+.button5:focus{
+    background:grey;
+    color: white;
+}
+
+/*button5*/
+@media screen and (max-width:600px){
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 356px;
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}
+}
+
+
+
+/*price panels*/
+
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+ float: left;
+    width: 25%;
+    padding: 8px;
+    margin-top: -15.3%;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 50px 0 rgba(0,0,0,0.5)
+}
+
+.price .header {
+    background-color: #29292A;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.price .grey {
+    background-color: darkgrey;/*#eee*/
+    font-size: 20px;
+}
+
+.button_1 {
+    background-color: #183a5b;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+        margin-top: 10%;
+    }
+}
+
+
+
+
+
+/*flip cards*/
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.card {
+  background: #29292a;
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+  background: cornflowerblue;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: yellowgreen;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background: tomato;
+}
+
+.cardBox:nth-child(5) .card .back {
+  background: #a954ff;
+}
+
+.cardBox:nth-child(6) .card .back {
+  background: #7c7c7c;
+}
+
+.cardBox:nth-child(7) .card .back {
+  background: #700000;
+}
+
+.cardBox:nth-child(8) .card .back {
+  background: #004d40;
+}
+
+.cardBox:nth-child(9) .card .back {
+  background: #4e342e;
+}
+
+.cardBox:nth-child(10) .card .back {
+  background: #827717;
+}
+
+.cardBox:nth-child(11) .card .back {
+  background: #01579b;
+}
+
+.cardBox:nth-child(12) .card .back {
+  background: #ad1457;
+}
+
+.cardBox:nth-child(13) .card .back {
+  background: #607d8b;
+}
+
+.cardBox:nth-child(14) .card .back {
+  background: #263238;
+}
+
+.cardBox:nth-child(15) .card .back {
+  background: #f44336;
+}
+
+.cardBox:nth-child(16) .card .back {
+  background: #002884;
+}
+
+.cardBox:nth-child(17) .card .back {
+  background: #581845;
+}
+
+/*.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}*/
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 94.5%;
+  }
+  .card {
+    height: 260px;
+  }
+}
+
+
+/*container*/
+
+.container{
+   margin-right: 14%;
+   padding-left: 35%;
+}
+
+@media screen and (max-width:600px){
+
+.container{
+  padding-top: 17%;
+  width: 110%;
+  margin-left: -20%;
+  margin-top: -165px;
+}
+
+}
+
+
+/*button_2*/
+
+.button2 {
+    background-color: #183a5b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-left: 40%;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/*result_table*/
+
+.result_table{
+  overflow-x: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.result_table table{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.result_table th{
+  background-color: #29292A;
+  color: white;
+}
+
+.result_table th,td{
+  border: 2px solid #ddd;
+  padding: 15px;
+}
+
+
+/* Style the sub buttons */
+.btn1 {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 22px;
+   border: 2px solid grey;
+
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn1:hover {
+    background-color: #666;
+    color: white;
+}
+
+
+@media screen and (max-width:600px){
+.btn1{
+  width: 104%;
+  margin-left: -15px;
+}
+}
+
+a
+{
+  color: black;
+}
+
+
+
+.menu{
+background: rgba(255,255,255, 0.4);
+  color: #f1f1f1;
+  width: 100%;
+  float: right;
+  height: 100px;
+
+  }
+
+    @media screen and (max-width:600px){
+    .menu{
+      height: 100px;
+    }
+  }
+
+
+
+  /*button6*/
+
+.button6 {
+    background-color: grey; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 27px;
+    margin: 10px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+
+  .button6:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media screen and (max-width:600px){
+  .button6 {
+    width: 88%;
+    margin-left: 20px;
+  }
+}
+
+
+
+
+.dropdown {
+  position: fixed;
+    position: relative;
+    display: inline-block;
+    margin-left: 80%;
+    margin-top: 22px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 13px 15px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width:600px){
+  .dropdown{
+    margin-left: 2%;
+    margin-bottom: 10px;
+  }
+}
+
+
+.imgbtn{
+  margin-left: 23%;
+  margin-right: 20%;
+}
+
+@media screen and (max-width:600px){
+  .imgbtn{
+    margin-left: 15%;
+  }
+  h2{
+    text-align: center;
+  }
+}
+
+.imgbtn1{
+  margin-left: 20%;
+  margin-right: 23%;
+}
+
+@media screen and (max-width:600px){
+  .imgbtn1{
+    margin-right: 10%;
+  }
+  h2{
+    text-align: center;
+  }
+}
+
+
+.glyphicon glyphicon-ok check-mark{
+  color: black;
+}
+
+
+
+
+</style>
+
+  <body style="background-image: url(icons/wall3.jpg);">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" style="background-color: #f1f1f1; color: #173579;font-size: 17px;" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="icons/IDO_01.png" height="90" width="170" class="img-responsive margin center-block" alt=""></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="margin-top: 23px;">
+      <a href="order.html" class="w3-bar-item w3-button" style="text-decoration: none;">BACK</a>
+      <a href="consumer.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONSUMER CHARTER</a>
+      <a href="contact.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONTACT US</a>
+      <a href="login.html" class="w3-bar-item w3-button" style="text-decoration: none;">LOG-OUT</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size: 20px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="order.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+  <a href="consumer.html" onclick="w3_close()" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOG-OUT</a>
+
+</nav>
+
+
+<br><br><br><br><br><br>
+
+
+<div class="dropdown">
+  <span style="color: black; font-size: 20px;">Welcome User, &nbsp; <img src="icons/user.png" style="height: 40px; width: 40px;"></span>
+  <div class="dropdown-content">
+    <p style="color: grey; text-align: center;">UPASS</p>
+  </div>
+</div>
+
+
+  <div class="tabs">
+
+    <label for="show-menu" class="show-menu" style=" font-size: 20px;">Menu</label>
+    <input style="opacity: 0.1" type="checkbox" id="show-menu">
+    <ul class="navigation">
+      <li class="tablink"><a href="myplans.html"><b style="font-size: 15px;">MY PLAN</b></a></li>
+      <li class="tablink"><a style="background: #dd3737" href="order.html"><b style="font-size: 15px;">ORDER</b></a></li>
+      <li class="tablink"><a href="changeplan.html"><b style="font-size: 15px;">CHANGE PLAN</b></a></li>
+      <li class="tablink"><a href="lodge.html"><b style="font-size: 15px;">LODGE SERVICE REQUEST</b></a></li>
+    </ul>
+
+  </div>
+
+
+<div id="myDIV" style="margin-left: 38%; margin-top: 6%;">
+
+
+  <button class="btn1 active">HOUSE RECOMMENDATION</button>
+</div>
+
+
+
+
+<div style="margin-top: 10%;">
+
+<div class="imgbtn">
+<a href="#" style="float: left;"><h2><b style="margin-left: -20px;">BLOCK BUSTER PACK</b> <br> <img src="icons/bbpack.png" height="250px" width="250px"></a></h2>
+</div>
+
+<div class="imgbtn1">
+<a href="#" style="float: right;"><h2><b style="margin-left: 15px;">FAMILY PACK</b> <br> <img src="icons/fp_pack.png" height="250px" width="250px"></a></h2>
+</div>
+
+
+</div>
+
+
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("restd");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+
+
+</body>
+</html>

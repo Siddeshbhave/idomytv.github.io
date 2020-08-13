@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>IDO</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+      <!-- nav -->
+      <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- nav -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+
+
+
+<!-- carousel -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<title>IDO</title>
+</head>
+
+<style>
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+/*TABS*/
+*{
+	margin:0;
+	padding:0;
+}
+
+/*hiding label and checkbox*/
+input[type=checkbox],
+.show-menu{
+	visibility: visible;
+  opacity: 0.1;
+}
+
+/*styling our wrapper*/
+.tabs{
+	max-width:960px;
+	margin:0 auto;
+	color:#ecf0f1;
+	font-family:'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*styling h1 in wrapper*/
+.tabs h1{
+	padding:20px;
+	text-align:center;
+}
+
+/*styling navigation*/
+.navigation{
+	display:flex;
+	list-style-type:none;
+}
+
+/*styling list items->li in navigation*/
+.navigation li{
+	background:#29292A;
+	flex:1;
+	text-align:center;
+	transition:all .2s ease;
+}
+
+/*giving border left to all list items, but not to our first list item*/
+.navigation li:not(:first-child){
+	border-left:1px solid #ecf0f1;
+}
+
+/*styling hover*/
+.navigation li:hover{
+	background:#333333;
+	flex:1.1;
+}
+
+/*styling our anchor tag*/
+.navigation li a{
+	display:block;
+	padding:20px 0;
+	color:inherit;
+	text-decoration:none;
+}
+
+
+
+/*giving style for mobile*/
+
+@media screen and (max-width:600px){
+	/*styling our show menu button*/
+	 .show-menu{
+    background:#342a2a;
+    display:flex;
+    cursor:pointer;
+    padding: 20px 0;
+    justify-content:center;
+    margin-right: 35%;
+    margin-top: 5%;
+    width: 100%;
+    opacity: 0.7;
+  }
+	/*hiding our navigation*/
+	.navigation{
+		display:none;
+	}
+
+	/*displaying our list items as block element; if checkbox is check*/
+	input[type=checkbox]:checked ~ .navigation{
+		display:block;
+	}
+
+	/*removing border left from the pseudo class*/
+	.navigation li:not(:first-child){
+		border:0;
+	}
+	/*giving margin to list item, excluding last list item*/
+	.navigation li:not(:last-child){
+		margin:2px 0;
+	}
+}
+
+
+
+
+	/*res-table*/
+.res-table{
+  overflow-x: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.res-table table{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.res-table th{
+  background-color: #29292A;/*blue #183a5b*/
+  color: white;
+}
+
+.res-table th,td{
+  border: 2px solid #ddd;
+  padding: 10px;
+}
+
+p{
+  margin-left: 40px;
+  list-style-type: none;
+}
+
+
+
+.dropdown {
+  position: fixed;
+    position: relative;
+    display: inline-block;
+    margin-left: 80%;
+    margin-top: 22px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 13px 15px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width:600px){
+  .dropdown{
+    margin-left: 2%;
+  }
+}
+
+
+
+
+/*HOT OFFERS*/
+.button {
+  display: inline-block;
+  border-radius: 40px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: right;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media screen and (max-width:600px){
+  .button{
+    margin-left: 55%;
+    width: 80%;
+  }
+}
+
+
+/*button_2*/
+
+.button2 {
+    background-color: #183a5b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-left: 40%;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+
+</style>
+
+<body style="background-image: url(icons/wall3.jpg);">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" style="background-color: #f1f1f1; color: #173579;font-size: 17px;" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="icons/IDO_01.png" height="90" width="170" class="img-responsive margin center-block" alt=""></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="margin-top: 23px;">
+      <a href="consumer.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONSUMER CHARTER</a>
+      <a href="contact.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONTACT US</a>
+      <a href="login.html" class="w3-bar-item w3-button" style="text-decoration: none;">LOG-OUT</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size: 20px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="consumer.html" onclick="w3_close()" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOG-OUT</a>
+
+</nav>
+
+<br><br><br><br><br><br>
+
+<div class="dropdown">
+  <span style="color: black; font-size: 20px;">Welcome User, &nbsp; <img src="icons/user.png" style="height: 40px; width: 40px;"></span>
+  <div class="dropdown-content">
+    <p style="color: grey">UPASS</p>
+  </div>
+</div>
+
+
+  <div class="tabs">
+
+		<label for="show-menu" class="show-menu" style=" font-size: 20px; color: white;">Menu</label>
+		<input style="opacity: 0.1" type="checkbox" id="show-menu">
+		<ul class="navigation">
+			<li class="tablink"><a style="background: #dd3737"  href="myplans.html"><b style="font-size: 15px;">MY PLAN</b></a></li>
+			<li class="tablink"><a href="order.html"><b style="font-size: 15px;">ORDER</b></a></li>
+			<li class="tablink"><a href="changeplan.html"><b style="font-size: 15px;">CHANGE PLAN</b></a></li>
+			<li class="tablink"><a href="lodge.html"><b style="font-size: 15px;">LODGE SERVICE REQUEST</b></a></li>
+		</ul>
+
+	</div>
+
+
+<!--   <a href="offers.html"><img src="icons/hotoffer.png" class="responsive" style="margin-left: 82%;width: 15%;"></a>
+
+
+<a href="offers.html"><button class="button" style="vertical-align:middle; margin-right: 30px;"><span>Hot Offers! </span></button></a> -->
+
+
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" style="width: 70%; margin-left: 25.5%;">
+
+      <div class="item active">
+        <img src="icons/sports1.png" alt="Los Angeles" style="width:70%;">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="icons/newchannel.png" alt="Chicago" style="width:70%;">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="icons/movie.png" alt="New York" style="width:70%;">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="background: transparent; color: black; margin-left: 13%;">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next" style="background: transparent; color: black; margin-right: 13%;">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+<p style="margin-left: 20px;font-size: 20px; margin-bottom: 30px;"><b>Your Balance with/(payable to) us is</b></p>
+
+
+
+<p style="margin-top: 20px; font-size: 18px;margin-bottom: 20px; text-decoration: underline;"><b>Channels you have subscribed are: <i style="color: #c52727">₹  5,200/-</i></b></p>
+    <div class="res-table">
+      <table id="tblData">
+        <tbody>
+          <tr>
+            <th style="text-align: center;">Sr No.</th>
+            <th style="text-align: center;">Channel</th>
+            <th style="text-align: center;">Language</th>
+            <th style="text-align: center;">Valid Till</th>
+            <th style="text-align: center;">Fees</th>
+          </tr>
+
+          <tr>
+            <td><b>1.</b></td>
+            <td><b>Colors Kannada</b></td>
+            <td><b>Kannada</b></td>
+            <td><b>2019-01-01</b></td>
+            <td><b>19</b></td>
+          </tr>
+          <tr>
+            <td><b>2.</b></td>
+            <td><b>News18 Kannada</b></td>
+            <td><b>Kannada</b></td>
+            <td><b>2018-11-29</b></td>
+            <td><b>0.5</b></td>
+          </tr>
+          <tr>
+            <td><b>3.</b></td>
+            <td><b>Movies OK</b></td>
+            <td><b>Hindi</b></td>
+            <td><b>2018-12-18</b></td>
+            <td><b>7.14</b></td>
+          </tr>
+          <tr>
+            <td><b>4.</b></td>
+            <td><b>Kannada Cinema</b></td>
+            <td><b>Kannada</b></td>
+            <td><b>2018-11-30</b></td>
+            <td><b>1</b></td>
+          </tr>
+          <tr>
+            <td><b>5.</b></td>
+            <td><b>Colours Super</b></td>
+            <td><b>Kannada</b></td>
+            <td><b>2019-02-02</b></td>
+            <td><b>14</b></td>
+          </tr>
+          <tr>
+            <td><b>6.</b></td>
+            <td><b>Zee Salaam</b></td>
+            <td><b>Urdu</b></td>
+            <td><b>2019-01-14</b></td>
+            <td><b>1</b></td>
+          </tr>
+          <tr>
+            <td><b>7.</b></td>
+            <td><b>Zee Cafe</b></td>
+            <td><b>English</b></td>
+            <td><b>2018-12-28</b></td>
+            <td><b>15</b></td>
+          </tr>
+          <tr>
+            <td><b>8.</b></td>
+            <td><b>Zee Te lugu</b></td>
+            <td><b>Tamil</b></td>
+            <td><b>2019-02-28</b></td>
+            <td><b>12</b></td>
+          </tr>
+          <tr>
+            <td><b>9.</b></td>
+            <td><b>Zee 24 Taas</b></td>
+            <td><b>Marathi</b></td>
+            <td><b>2019-02-10</b></td>
+            <td><b>0.5</b></td>
+          </tr>
+          <tr>
+            <td><b>10.</b></td>
+            <td><b>Zee Marathi</b></td>
+            <td><b>Marathi</b></td>
+            <td><b>2019-01-18</b></td>
+            <td><b>19</b></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="button2" style="margin-top: 30px; margin-bottom: 30px;" onclick="exportTableToExcel('tblData')">Export table data</button>
+
+    </div>
+
+
+	</div>
+
+
+
+
+
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+
+
+<script>
+function exportTableToExcel(tableID, filename = ''){
+  var downloadLink;
+  var dataType = 'application/vnd.ms-excel';
+  var tableSelect = document.getElementById(tableID);
+  var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+  // Specify file name
+  filename = filename?filename+'.xls':'excel_data.xls';
+
+  //create download link element
+  downloadLink = document.createElement("a");
+
+  document.body.appendChild(downloadLink);
+
+  if(navigator.msSaveOrOpenBlob){
+    var blob = new Blob(['\ufeff', tableHTML], {
+      type: dataType
+    });
+    navigator.msSaveOrOpenBlob( blob, filename);
+  }else{
+    //create a link to the file
+    downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+    //setting the file name
+    downloadLink.download = filename;
+
+    //triggering the function
+    downloadLink.click();
+  }
+
+}
+</script>
+
+
+</body>
+</html>

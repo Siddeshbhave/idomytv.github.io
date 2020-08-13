@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<title>IDO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*login page*/
+*{
+      box-sizing: border-box;
+}
+
+.wrap{
+      max-width: 400px;
+      margin: auto;
+      margin-top: 50px;
+      padding: 20px;
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 15px 25px rgba(0,0,0,.5);
+}
+
+.wrap h3{
+      font-size: 30px;
+      text-align: center;
+}
+
+input[type=text],input[type=password],input[type=submit]{
+      width: 100%;
+      font-size: 15px;
+      border-radius: 5px;
+      outline: none;
+      border:none;
+}
+
+fieldset{
+  border-radius: 10px;
+}
+
+label{
+      font-size: 17px;
+      font-weight: bold;
+      color: #29292A;
+}
+
+input[type=submit]{
+      background: #29292A;
+      border: none;color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 15px;
+      cursor: pointer;
+}
+
+input[type=submit]:hover{
+      background: maroon;
+}
+
+p{
+      text-align: center;
+      font-size: 13px;
+}
+
+p a{
+      font-weight: bold;
+}
+
+button{
+      padding: 10px;
+      width: 49%;
+      box-sizing: border-box;
+      font-size: 1.3em;
+      border-radius: 35px;
+      font-weight: bold;
+      cursor: pointer;
+}
+
+button a{
+      color: #fff;
+      font-size: 20px;
+}
+
+button:nth-child(1){
+      background: maroon;
+}
+
+button:nth-child(2){
+      background: maroon;
+}
+
+button:hover{
+      background: #29292A;
+}
+
+
+/*rounded button*/
+
+.fa {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 22%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-phone {
+  background: #00b489;
+  color: white;
+}
+
+
+.fa-envelope {
+  background: #007bb5;
+  color: white;
+}
+
+
+</style>
+
+
+<body style="background-image: url(icons/wall3.jpg);">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" style="background-color: #f1f1f1; color: #173579;font-size: 17px;" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="icons/IDO_01.png" height="90" width="170" class="img-responsive margin center-block" alt=""></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="margin-top: 23px;">
+      <a href="order.html" class="w3-bar-item w3-button">ORDER</a>
+      <a href="consumer.html" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+      <a href="contact.html" class="w3-bar-item w3-button">CONTACT US</a>
+      <a href="register.html" class="w3-bar-item w3-button">REGISTER</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size: 20px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="order.html" onclick="w3_close()" class="w3-bar-item w3-button">ORDER</a>
+  <a href="consumer.html" onclick="w3_close()" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="register.html" onclick="w3_close()" class="w3-bar-item w3-button">REGISTER</a>
+
+
+</nav>
+
+
+
+  <div class="content" style="padding-top: 15%">
+<div class="wrap">
+      <h3 style="color: #29292A">LOG-IN</h3>
+
+      <select style="float: right;">
+        <option hidden="">Select Language</option>
+        <option>English</option>
+        <option>Hindi</option>
+        <option>Marathi</option>
+        <option>Kannada</option>
+      </select>
+
+      <br><br>
+
+      <form name="loginForm" method="post" action="myplans.html">
+        <fieldset>
+          <legend>
+            <b>User ID</b>
+          </legend>
+          <input type="text" name="userid" placeholder="Enter ID" required="">
+        </fieldset>
+
+        <fieldset style="margin-top: 5%;">
+          <legend>
+            <b>Password</b>
+          </legend>
+          <input type="Password" name="pwd" placeholder="Enter Password" id="myInput" required="">
+        </fieldset>
+
+        <br>
+            <!-- <label> User ID:</label>
+            <br>
+            <input type="text" name="userid" placeholder="Enter ID" required=""> -->
+            <!-- <label>Password:</label>
+            <br>
+            <input type="Password" name="pwd" placeholder="Enter Password" id="myInput" required=""> -->
+            <input type="checkbox" onclick="myFunction()">Show Password
+
+            <br><br>
+            <button type="submit"  onclick="return check(this.form)" style="background: #29292A; margin-left: 25%; color: white; font-size: 17px;">Log-In</button>
+      </form>
+      <div class="call_mail">
+            <h4 style="text-align: center;">Tap To:</h4>
+            <form>
+
+<a href="tel:01234567890" class="fa fa-phone"></a>
+<a href="mailto:ravi@upass.cc" class="fa fa-envelope"></a>
+
+            <!-- <button><a href="">Call</a></button>
+            <button><a href="">Mail</a></button> -->
+      </div>
+      <p style="margin-top: 20px;">Forgot Password? <a href="forgot.html" style="color: blue;">Click Here</a></p>
+      </form>
+
+</div>
+
+</div>
+
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+
+<!-- show password -->
+<script>
+function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
+
+</body>
+</html>

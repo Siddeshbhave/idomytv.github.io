@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IDO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+
+}
+
+
+
+  table td{
+    text-align: center;
+  }
+
+  th{
+font-size: 20px;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+
+  /*dropdown*/
+
+  .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 250px;
+  box-shadow: 1px 10px 26px 5px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ffe6e6}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+.active, .btn1:hover {
+    background-color: orange;
+    color: white;
+}
+
+
+</style>
+
+<body style="background-image: url(icons/wall3.jpg);">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" style="background-color: #f1f1f1; color: #173579;font-size: 17px;" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="icons/IDO_01.png" height="90" width="170" class="img-responsive margin center-block" alt=""></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="margin-top: 23px;">
+      <a href="order.html" class="w3-bar-item w3-button">ORDER</a>
+      <a href="consumer.html" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+      <a href="ourclientnetwork.html" class="w3-bar-item w3-button">OUR CLIENT NETWORK</a>
+      <a href="contact.html" class="w3-bar-item w3-button">CONTACT US</a>
+      <a href="register.html" class="w3-bar-item w3-button">REGISTER</a>
+      <a href="login.html" class="w3-bar-item w3-button">LOG-IN</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size: 20px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="order.html" onclick="w3_close()" class="w3-bar-item w3-button">ORDER</a>
+  <a href="consumer.html" onclick="w3_close()" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+  <a href="ourclientnetwork.html" onclick="w3_close()" class="w3-bar-item w3-button">OUR CLIENT NETWORK</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="register.html" onclick="w3_close()" class="w3-bar-item w3-button">REGISTER</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOG-IN</a>
+
+
+</nav>
+
+<br><br><br><br><br>
+
+
+  <div class="dropdown" style="margin-top: 30px;margin-left: 43%;">
+  <button class="dropbtn">Select Language</button>
+  <div class="dropdown-content">
+  <a href="hinditables.html" class="activ active">HINDI</a>
+  <a href="marathitables.html">MARATHI</a>
+  <a href="englishtables.html">ENGLISH</a>
+  <a href="kannadatables.html">KANNADA</a>
+  <a href="tamiltables.html">TAMIL</a>
+  <a href="malyalamtables.html">MALAYALAM</a>
+  <a href="banglatables.html">BANGLA</a>
+  <a href="telugutables.html">TELUGU</a>
+  <a href="punjabitables.html">PUNJABI</a>
+  <a href="gujaratitables.html">GUJARATI</a>
+  <a href="odiatables.html">ODIA</a>
+  <a href="assamtables.html">ASSAM</a>
+  <a href="bhojpuritables.html">BHOJPURI</a>
+  </div>
+</div>
+
+
+
+<table style="width: 100%; margin-top: 5%; font-size: 17px;font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;" border="4" >
+    <tr align="center" >
+        <th style="padding:2.5px; width: 10%;" rowspan="2">Sr No.</th>
+        <th style="padding:2.5px; width: 55%;" rowspan="2">Hindi Channels</th>
+        <th style="padding:2.5px;" colspan="2">NRP</th>
+
+    </tr>
+    <tr>
+        <th>SD</th>
+        <th>HD</th>
+
+    </tr>
+     <tr>
+         <td colspan = "4" style="text-align: center;font-size: 15px;"><b>GEC</b></td>
+     </tr>
+     <tr>
+     	<td>1</td>
+     	<td style="text-align: left">Colors</td>
+     	<td style="text-align: right;">22.42</td>
+     	<td style="text-align: right;">22.42</td>
+     </tr>
+     <tr>
+        <td>2</td>
+        <td style="text-align: left">SAB</td>
+        <td style="text-align: right;">22.42</td>
+        <td style="text-align: right;">22.42</td>
+     </tr>
+     <tr>
+         <td>3</td>
+         <td style="text-align: left">Sony</td>
+         <td style="text-align: right;">22.42</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+         <td>4</td>
+         <td style="text-align: left">Star Plus</td>
+         <td style="text-align: right;">22.42</td>
+         <td style="text-align: right;">22.42</td>
+     </tr>
+     <tr>
+         <td>5</td>
+         <td style="text-align: left">Zee TV</td>
+         <td style="text-align: right;">22.42 </td>
+         <td style="text-align: right;">22.42 </td>
+     </tr>
+     <tr>
+         <td>6</td>
+         <td style="text-align: left">Star Bharat</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: right;">22.42 </td>
+     </tr>
+  <tr>
+         <td>7</td>
+         <td style="text-align: left">Set Max</td>
+         <td style="text-align: right;">18.88</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>8</td>
+         <td style="text-align: left">&TV</td>
+         <td style="text-align: right;">14.16 </td>
+         <td style="text-align: right;">22.42</td>
+     </tr>
+      <tr>
+         <td>9</td>
+         <td style="text-align: left">UTV HD</td>
+         <td style="text-align: center;">NS</td>
+         <td style="text-align: right;">9.44</td>
+     </tr>
+     <tr>
+         <td>10</td>
+         <td style="text-align: left">Discovery Jeet</td>
+         <td style="text-align: right;">1.18</td>
+         <td style="text-align: right;">2.36</td>
+     </tr>
+      <tr>
+         <td>11</td>
+         <td style="text-align: left">Zee Salaam</td>
+         <td style="text-align: right;">1.18</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>12</td>
+         <td style="text-align: left">Zoom</td>
+         <td style="text-align: right;">1.18</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>13</td>
+         <td style="text-align: left">A1 TV</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>14</td>
+         <td style="text-align: left">Channel Win</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>15</td>
+         <td style="text-align: left">DD Bharati</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>16</td>
+         <td style="text-align: left">DD India</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>17</td>
+         <td style="text-align: left">DD Kashir</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>18</td>
+         <td style="text-align: left">DD National</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>19</td>
+         <td style="text-align: left">Rishtey TV</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>20</td>
+         <td style="text-align: left">Sony Pal</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>21</td>
+         <td style="text-align: left">Star Utsav</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td>22</td>
+         <td style="text-align: left">Zee Anmol</td>
+         <td style="text-align: right;">0.00</td>
+         <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>23</td>
+        <td style="text-align: left">News18 Rajasthan</td>
+        <td style="text-align: right;">0.59</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      </tr>
+     <tr>
+         <td colspan = "4" style="text-align: center;font-size: 15px;"><b>MOVIES</b></td>
+     </tr>
+     <tr>
+        <td>1</td>
+        <td style="text-align: left">Zee Cinema</td>
+        <td style="text-align: right;">22.42</td>
+        <td style="text-align: right;">22.42</td>
+     </tr>
+      <tr>
+        <td>2</td>
+        <td style="text-align: left">Max HD</td>
+        <td style="text-align: center;">NS</td>
+        <td style="text-align: right;">20.06</td>
+     </tr>
+     <tr>
+        <td>3</td>
+        <td style="text-align: left">Sony Max</td>
+        <td style="text-align: right;">18.88</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>4</td>
+        <td style="text-align: left">&Pictures </td>
+        <td style="text-align: right;">12.98</td>
+        <td style="text-align: right;">22.42</td>
+     </tr>
+     <tr>
+        <td>5</td>
+        <td style="text-align: left">Star Gold</td>
+        <td style="text-align: right;">9.44</td>
+        <td style="text-align: right;">12.98</td>
+     </tr>
+     <tr>
+        <td>6</td>
+        <td style="text-align: left">Star Gold Selete </td>
+        <td style="text-align: right;">8.26</td>
+        <td style="text-align: right;">12.98</td>
+     </tr>
+     <tr>
+        <td>7</td>
+        <td style="text-align: left">Cineplex HD</td>
+        <td style="text-align: center;">NS</td>
+        <td style="text-align: right;">5.90</td>
+     </tr>
+     <tr>
+        <td>8</td>
+        <td style="text-align: left">Rishtey Cineplex</td>
+        <td style="text-align: right;">3.54</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>9</td>
+        <td style="text-align: left">UTV Action </td>
+        <td style="text-align: right;">2.36</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>10</td>
+        <td style="text-align: left">UTV Movies </td>
+        <td style="text-align: right;">2.36</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>11</td>
+        <td style="text-align: left">Zee Bollywood </td>
+        <td style="text-align: right;">2.36</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>12</td>
+        <td style="text-align: left">Max 2</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>13</td>
+        <td style="text-align: left">Movies OK </td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>14</td>
+        <td style="text-align: left">Zee Action</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>15</td>
+        <td style="text-align: left">B4U Movies</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>16</td>
+        <td style="text-align: left">Cinema TV </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>17</td>
+        <td style="text-align: left">Enterr10 </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>18</td>
+        <td style="text-align: left">Housefull Action</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>19</td>
+        <td style="text-align: left">Housefull Movies</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>20</td>
+        <td style="text-align: left">Maha Movies</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>21</td>
+        <td style="text-align: left">Manoranjan Movies</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>22</td>
+        <td style="text-align: left">Manoranjan TV </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>23</td>
+        <td style="text-align: left">Movies House</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>24</td>
+        <td style="text-align: left">Sky Star  </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>25</td>
+        <td style="text-align: left">Sony Wah  </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>26</td>
+        <td style="text-align: left">Star Utsav Movies</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>27</td>
+        <td style="text-align: left">Wow Cinema  </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>28</td>
+        <td style="text-align: left">Zee Anmol Cinema   </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td colspan = "4" style="text-align: center;font-size: 15px;"><b>Music</b></td>
+     </tr>
+      <tr>
+        <td>1</td>
+        <td style="text-align: left">MTV 3 </td>
+        <td style="text-align: right;">3.54</td>
+        <td style="text-align: right;">5.90</td>
+     </tr>
+      <tr>
+        <td>2</td>
+        <td style="text-align: left">Bindass</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>3</td>
+        <td style="text-align: left">Zee ETC Bollywood</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>4</td>
+        <td style="text-align: left">Zing</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>5</td>
+        <td style="text-align: left">MTV Beats</td>
+        <td style="text-align: right;">0.59</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>6</td>
+        <td style="text-align: left"> 9X Jalawa</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>7</td>
+        <td style="text-align: left">9X M  </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>8</td>
+        <td style="text-align: left">B4U Music</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>9</td>
+        <td style="text-align: left">Mastiii </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>10</td>
+        <td style="text-align: left">Music India</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>11</td>
+        <td style="text-align: left">Sony Mix</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+         <td colspan = "4" style="text-align: center;font-size: 15px;"><b>NEWS & CURRENT AFFAIRS
+</b></td>
+       <tr>
+        <td>1</td>
+        <td style="text-align: left">CNBC Awaaz</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+        <td>2</td>
+        <td style="text-align: left">NDTV India</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>3</td>
+        <td style="text-align: left">News 18 India</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>4</td>
+        <td style="text-align: left">Aaj Tak Tez</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>5</td>
+        <td style="text-align: left">News 18 Hindi Regional/J</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+
+     </tr>
+     <tr>
+        <td>6</td>
+        <td style="text-align: left">News 18 MP/C</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>7</td>
+        <td style="text-align: left">TEZ</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>8</td>
+        <td style="text-align: left">Zee Business</td>
+        <td style="text-align: right;">0.59</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>9</td>
+        <td style="text-align: left">Zee Hindi Bihar Jharkhand</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>10</td>
+        <td style="text-align: left">Zee Hindi MP/Chattisgar</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>11</td>
+        <td style="text-align: left">Zee Hindi Rajastan News</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <tr>
+        <td>12</td>
+        <td style="text-align: left">Zee Hindi UP/Uttrakhand</td>
+        <td style="text-align: right;">1.18</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <tr>
+        <td>13</td>
+        <td style="text-align: left">Aaj Tak</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: right;">2.36</td>
+     </tr>
+     <tr>
+        <td>14</td>
+        <td style="text-align: left">ABP News</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>15</td>
+        <td style="text-align: left">Dabang  </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+        <td>16</td>
+        <td style="text-align: left">Dangal TV</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>17</td>
+        <td style="text-align: left">DD Hindi Bihar </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>18</td>
+        <td style="text-align: left">DD Hindi MP</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>19</td>
+        <td style="text-align: left">DD Hindi Rajasthan</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>20</td>
+        <td style="text-align: left">DD Hindi UP</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>21</td>
+        <td style="text-align: left">DD Kishan</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>22</td>
+        <td style="text-align: left">DD Loksabha</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>23</td>
+        <td style="text-align: left">DD News</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>24</td>
+        <td style="text-align: left">DD Rajyasabha</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>25</td>
+        <td style="text-align: left">Digishala</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>26</td>
+        <td style="text-align: left">Gulistan News </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>27</td>
+        <td style="text-align: left">India TV </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>28</td>
+        <td style="text-align: left">IBC 24</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>29</td>
+        <td style="text-align: left">India News</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>30</td>
+        <td style="text-align: left">News 18 Hindi Regional</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>31</td>
+        <td style="text-align: left">News 18 UP</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>32</td>
+        <td style="text-align: left">News 24</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>33</td>
+        <td style="text-align: left">News Nation</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+        <td>34</td>
+        <td style="text-align: left">News State</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+        <td>35</td>
+        <td style="text-align: left">Sadhana Plus</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+        <td>36</td>
+        <td style="text-align: left">Zee Hindustan</td>
+        <td style="text-align: right;">0.59</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+        <td>37</td>
+        <td style="text-align: left">Zee News</td>
+        <td style="text-align: right;">0.59</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>38</td>
+        <td style="text-align: left">ZEE MP/CG</td>
+        <td style="text-align: right;">0.59</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>39</td>
+        <td style="text-align: left">Zee Rajasthan News</td>
+        <td style="text-align: right;">0.59</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+
+     <tr>
+         <td colspan = "4" style="text-align: center;font-size: 15px;"><b>SPORTS </b></td>
+     </tr>
+
+       <tr>
+        <td>1</td>
+        <td style="text-align: left">Star Sports 1 Hindi</td>
+        <td style="text-align: right;">22.42</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+        <td>2</td>
+        <td style="text-align: left">Star Sports HD Hindi</td>
+        <td style="text-align: center;">NS</td>
+        <td style="text-align: right;">22.42</td>
+     </tr>
+     <tr>
+ <tr>
+         <td colspan = "4" style="text-align: center;font-size: 15px;"><b>SPIRITUAL
+ </b></td>
+       <tr>
+        <tr>
+        <td>1</td>
+        <td style="text-align: left">Aastha</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+      <tr>
+        <td>2</td>
+        <td style="text-align: left">Aastha Bhajan</td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>3</td>
+        <td style="text-align: left">Arihant TV </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>4</td>
+        <td style="text-align: left">Divya TV  </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>5</td>
+        <td style="text-align: left">Jinvani 0 </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+
+     </tr>
+     <tr>
+        <td>6</td>
+        <td style="text-align: left">Mahavira </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>7</td>
+        <td style="text-align: left">Peace Of Mind </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>8</td>
+        <td style="text-align: left">Sadhna Bhakti   </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>9</td>
+        <td style="text-align: left">Sanskar  </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+     <tr>
+        <td>10</td>
+        <td style="text-align: left">Satsang  </td>
+        <td style="text-align: right;">0.00</td>
+        <td style="text-align: center;">NS</td>
+     </tr>
+</table>
+
+
+
+
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

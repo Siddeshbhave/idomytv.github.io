@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+   <!-- nav -->
+      <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- nav -->
+
+
+
+	<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+	<title>IDO</title>
+</head>
+
+<style>
+
+
+
+
+/*price panels*/
+
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+ float: left;
+    width: 100%;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 50px 0 rgba(0,0,0,0.5)
+}
+
+.price .header {
+    background-color: #29292A;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 7px;
+    text-align: center;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.price .grey {
+    background-color: darkgrey;/*#eee*/
+    font-size: 20px;
+}
+
+.button_1 {
+    background-color: #183a5b;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+
+    .button_1{
+      padding: 0px 0px;
+    }
+
+}
+
+
+
+.col-sm-3{
+  width: 100%;
+}
+
+
+.content{
+  width: 100%;
+}
+
+
+@media screen and (max-width:600px){
+.content{
+  width: 100%;
+}
+}
+</style>
+
+
+  <body style="background-image: url(icons/wall3.jpg);">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" style="background-color: #f1f1f1; color: #173579;font-size: 17px;" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="icons/IDO_01.png" height="90" width="170" class="img-responsive margin center-block" alt=""></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="margin-top: 23px;">
+      <a href="order.html" class="w3-bar-item w3-button" style="text-decoration: none;">BACK</a>
+      <a href="consumer.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONSUMER CHARTER</a>
+      <a href="contact.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONTACT US</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size: 20px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="order.html" onclick="w3_close()" class="w3-bar-item w3-button">BACK</a>
+  <a href="consumer.html" onclick="w3_close()" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+
+</nav>
+
+<br><br><br><br><br><br><br><br>
+
+<div class="content" style="width: 50%;float: left;">
+
+
+   <div class="col-sm-3">
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="font-size: 22px;"><b>FAMILY PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="font-size: 20px;"><b>₹ 8.00</b></a>
+         </h4>
+        </div>
+       <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black;"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+<li>Discovery Channel</li>
+<li>Animal Planet</li>
+<li>TLC</li>
+<li>Discovery Kids Channel</li>
+<li>Dsport</li>
+<li>Discovery Jeet </li>
+<li>Discovery Science</li>
+<li>Discovery Turbo</li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+   <div class="col-sm-3">
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="font-size: 22px;"><b>BASE PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="font-size: 20px;"><b>₹ 6.00</b></a>
+         </h4>
+        </div>
+       <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black;"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+<li>Discovery Channel</li>
+<li>Animal Planet</li>
+<li>TLC</li>
+<li>Discovery Kids Channel</li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+       <div class="col-sm-3">
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="font-size: 22px;"><b>TAMIL SPORTS PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="font-size: 20px;"><b>₹ 7.00</b></a>
+         </h4>
+        </div>
+       <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black;"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+<li>Discovery Channel</li>
+<li>Animal Planet</li>
+<li>TLC</li>
+<li>Discovery Kids Channel</li>
+<li>Dsport</li>
+<li>Discovery Channel – Tamil</li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+           <div class="col-sm-3">
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="font-size: 22px;"><b>HD Bouquet 1 -FAMILY HIGH DEFINITION PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="font-size: 20px;"><b>₹ 9.00</b></a>
+         </h4>
+        </div>
+       <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black;"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+<li>Discovery HD World </li>
+<li>Animal Planet HD World </li>
+<li>TLC HD world </li>
+<li>Discovery Kids Channel</li>
+<li>Dsport</li>
+<li>Discovery Jeet HD</li>
+<li>Discovery Science</li>
+<li>Discovery Turbo</li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+               <div class="col-sm-3">
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="font-size: 22px;"><b>HD Bouquet 3 - FAMILY HIGH DEFINITION PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="font-size: 20px;"><b>₹ 7.50</b></a>
+         </h4>
+        </div>
+       <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black;"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+<li>Discovery HD World </li>
+<li>Animal Planet HD World </li>
+<li>TLC HD world </li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+<div class="content" style="width: 50%;float: right;">
+
+
+
+ <div class="col-sm-3">
+
+
+       <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="font-size: 22px;"><b>SPORTS PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="font-size: 20px;"><b>₹ 7.00</b></a>
+         </h4>
+        </div>
+       <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+
+<li>Discovery Channel</li>
+<li>Animal Planet</li>
+<li>TLC</li>
+<li>Discovery Kids Channel</li>
+<li>Dsport</li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+     <div class="col-sm-3">
+
+
+       <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="font-size: 22px;"><b>TAMIL FAMILY PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="font-size: 20px;"><b>₹ 8.00</b></a>
+         </h4>
+        </div>
+       <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+
+<li>Discovery Channel</li>
+<li>Animal Planet</li>
+<li>TLC</li>
+<li>Discovery Kids Channel</li>
+<li>Dsport</li>
+<li>Discovery Jeet </li>
+<li>Discovery Science</li>
+<li>Discovery Turbo</li>
+<li>Discovery Channel – Tamil</li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+         <div class="col-sm-3">
+
+
+       <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="font-size: 22px;"><b>TAMIL BASE PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="font-size: 20px;"><b>₹ 6.00</b></a>
+         </h4>
+        </div>
+       <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+
+<li>Discovery Channel</li>
+<li>Animal Planet</li>
+<li>TLC </li>
+<li>Discovery Kids Channel</li>
+<li>Discovery Channel – Tamil</li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+             <div class="col-sm-3">
+
+
+       <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="font-size: 22px;"><b>HD Bouquet 2 - FAMILY HIGH DEFINITION PACK</b></a>
+          <br><br>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="font-size: 20px;"><b>₹ 8.50</b></a>
+         </h4>
+        </div>
+       <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body" style="color: black"><b><span><img src="" height="25" width="25" class="logo" alt="">
+
+          <div class="columns">
+  <ul class="price">
+
+
+<li>Discovery HD World </li>
+<li>Animal Planet HD World </li>
+<li>TLC HD world </li>
+<li>Discovery Kids Channel</li>
+<li>Dsport</li>
+    <li class="grey"><a href="payment.html" class="button_1" style="color: white; text-decoration: none;"><b>Subscribe</b></a></li>
+  </ul>
+</div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

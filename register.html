@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IDO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+/*register page*/
+*{
+      box-sizing: border-box;
+}
+
+.wrap{
+      max-width: 400px;
+      margin: auto;
+      margin-top: 50px;
+      padding: 20px;
+      font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 15px 25px rgba(0,0,0,.5);
+}
+
+.wrap h3{
+      font-size: 30px;
+      text-align: center;
+}
+
+input[type=text],input[type=password],input[type=submit]{
+
+   width: 100%;
+
+      font-size: 15px;
+      border-radius: 5px;
+      outline: none;
+      border:none;
+      /*width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      border-radius: 5px;
+      outline: none;
+      border:none;
+      border: 2px solid grey;*/
+}
+
+label{
+      font-size: 17px;
+      font-weight: bold;
+      color: #29292A;
+}
+
+input[type=submit]{
+      background: #29292A;
+      border: none;color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 15px;
+      cursor: pointer;
+}
+
+input[type=submit]:hover{
+      background: maroon;
+}
+
+input[type=button]{
+      background: maroon;
+      border: none;color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 15px;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-left: 32%;
+}
+
+input[type=button]:hover{
+      background: #29292A;
+}
+
+
+fieldset{
+  border-radius: 10px;
+}
+
+
+
+p{
+      text-align: center;
+      font-size: 15px;
+}
+
+p a{
+      text-decoration: none;
+      font-weight: bold;
+}
+
+button{
+      padding: 10px;
+      width: 49%;
+      box-sizing: border-box;
+      font-size: 1.3em;
+      border-radius: 35px;
+      font-weight: bold;
+      cursor: pointer;
+}
+
+button a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+}
+
+button:nth-child(1){
+      background: maroon;
+}
+
+button:nth-child(2){
+      background: maroon;
+}
+
+button:hover{
+      background: black;
+}
+
+
+
+</style>
+</head>
+
+
+<body style="background-image: url(icons/wall3.jpg);">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" style="background-color: #f1f1f1; color: #173579;font-size: 17px;" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="icons/IDO_01.png" height="90" width="170" class="img-responsive margin center-block" alt=""></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="margin-top: 23px;">
+      <a href="order.html" class="w3-bar-item w3-button">ORDER</a>
+      <a href="consumer.html" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+      <a href="contact.html" class="w3-bar-item w3-button">CONTACT US</a>
+      <a href="login.html" class="w3-bar-item w3-button">LOG-IN</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size: 20px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="order.html" onclick="w3_close()" class="w3-bar-item w3-button">ORDER</a>
+  <a href="consumer.html" onclick="w3_close()" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOG-IN</a>
+
+</nav>
+
+
+<div class="content" style="padding-top: 7%">
+<div class="wrap">
+      <h3 style="color: #29292A;">REGISTER</h3>
+      <form method="POST">
+
+          <fieldset>
+            <legend>
+              <b>Name</b>
+            </legend>
+            <input type="text" name="name" placeholder="Full Name" required="">
+          </fieldset>
+          <br>
+
+            <!-- <label> Name:</label><br>
+            <input type="text" name="name" placeholder="Full Name" required=""> -->
+
+              <fieldset>
+            <legend>
+              <b>Network Attach No.</b>
+            </legend>
+            <input type="text" name="network" placeholder="" required="">
+          </fieldset>
+          <br>
+
+            <!-- <label>Network Attach No.:</label><br>
+            <input type="text" name="network" placeholder="" required=""> -->
+
+            <fieldset>
+            <legend>
+              <b>CAN (Customer Account No.)</b>
+            </legend>
+            <input type="text" name="can" placeholder="" required="">
+          </fieldset>
+          <br>
+
+            <!-- <label>CAN (Customer Account No.):</label><br>
+            <input type="text" name="can" placeholder="" required=""> -->
+
+            <fieldset>
+            <legend>
+              <b>Phone</b>
+            </legend>
+            <input type="text" id="contactno" name="phone" minlength="10" maxlength="10" onkeypress="return validatePhone(event);" placeholder="Phone Number" required="">
+          </fieldset>
+          <br>
+
+            <!-- <label>Phone No:</label>
+            <input type="text" id="contactno" name="phone" minlength="10" maxlength="10" onkeypress="return validatePhone(event);" placeholder="Phone Number" required=""> -->
+
+            <fieldset>
+            <legend>
+              <b>Alternate</b>
+            </legend>
+            <input type="text" id="contactno" name="alt_phone" minlength="10" maxlength="10" onkeypress="return validatePhone(event);" placeholder="Phone Number" required="">
+          </fieldset>
+          <br>
+
+            <!-- <label>Alternate No:</label>
+            <input type="text" id="contactno" name="alt_phone" minlength="10" maxlength="10" onkeypress="return validatePhone(event);" placeholder="Phone Number" required=""> -->
+
+            <fieldset>
+            <legend>
+              <b>Enter OTP</b>
+            </legend>
+            <input type="password" name="otp" placeholder="Enter OTP" required="">
+          </fieldset>
+          <br>
+
+            <!-- <label>Enter OTP:</label><br>
+            <input type="text" name="otp" placeholder="Enter OTP" required=""> -->
+            <!-- <input type="button" value="Generate OTP"> -->
+            <!-- <input type="submit" value="REGISTER"> -->
+            <a href="login.html"><button type="submit" name="submit" style="background: #29292A; margin-left: 25%;color: white;font-size: 17px;">Register</button></a>
+      </form>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+     <script type="text/javascript">
+  function validatePhone(event) {
+
+
+    var key = window.event ? event.keyCode : event.which;
+
+    if(event.keyCode == 8 || event.keyCode == 46 || event.keyCode == 37 || event.keyCode == 39) {
+
+      return true;
+    } else if( key < 48 || key > 57 ) {
+
+      return false;
+    } else return true;
+  }
+</script>
+
+
+</body>
+</html>

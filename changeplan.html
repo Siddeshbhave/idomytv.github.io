@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>IDO</title>
+
+ <!-- nav -->
+      <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- nav -->
+
+
+	<title>IDO</title>
+</head>
+
+<style>
+
+	body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+/*TABS*/
+*{
+	margin:0;
+	padding:0;
+}
+
+/*hiding label and checkbox*/
+input[type=checkbox],
+.show-menu{
+  visibility: visible;
+  opacity: 5;
+  color: transparent;
+}
+
+/*styling our wrapper*/
+.tabs{
+	max-width:960px;
+	margin:0 auto;
+	color:#ecf0f1;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*styling h1 in wrapper*/
+.tabs h1{
+	padding:20px;
+	text-align:center;
+}
+
+/*styling navigation*/
+.navigation{
+	display:flex;
+	list-style-type:none;
+}
+
+/*styling list items->li in navigation*/
+.navigation li{
+	background:#29292A;
+	flex:1;
+	text-align:center;
+	transition:all .2s ease;
+}
+
+/*giving border left to all list items, but not to our first list item*/
+.navigation li:not(:first-child){
+	border-left:1px solid #ecf0f1;
+}
+
+/*styling hover*/
+.navigation li:hover{
+	background:#333333;
+	flex:1.1;
+}
+
+/*styling our anchor tag*/
+.navigation li a{
+	display:block;
+	padding:20px 0;
+	color:inherit;
+	text-decoration:none;
+}
+
+
+
+/*giving style for mobile*/
+
+@media screen and (max-width:600px){
+	/*styling our show menu button*/
+	 .show-menu{
+    background:#342a2a;
+    color: white;
+    display:flex;
+    cursor:pointer;
+    padding: 20px 0;
+    justify-content:center;
+    margin-right: 35%;
+    margin-top: 2%;
+    width: 100%;
+    opacity: 0.7;
+  }
+	/*hiding our navigation*/
+	.navigation{
+		display:none;
+	}
+
+	/*displaying our list items as block element; if checkbox is check*/
+	input[type=checkbox]:checked ~ .navigation{
+		display:block;
+	}
+
+	/*removing border left from the pseudo class*/
+	.navigation li:not(:first-child){
+		border:0;
+	}
+	/*giving margin to list item, excluding last list item*/
+	.navigation li:not(:last-child){
+		margin:2px 0;
+	}
+}
+
+
+/*ORDER BUTTON 5*/
+.button5 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 200px;
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.button5:clicked
+{
+  background: grey;
+  color: white;
+}
+
+.button5:active{
+    background:grey;
+}
+
+.button5:focus{
+    background:grey;
+    color: white;
+}
+
+/*button5*/
+@media screen and (max-width:600px){
+.button5 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 356px;
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}
+}
+
+
+/*extend-table*/
+.extend-table{
+  overflow-x: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.extend-table table{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.extend-table th{
+  background-color: #29292A;
+  color: white;
+}
+
+.extend-table th,td{
+  border: 2px solid #ddd;
+  padding: 15px;
+}
+
+@media screen and (max-width:600px){
+
+.extend-table{
+  padding-top: 10%;
+  margin-left: 10px;
+}
+
+}
+
+
+
+/*force-table*/
+.force-table{
+  overflow-x: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.force-table table{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.force-table th{
+  background-color: #29292A;
+  color: white;
+}
+
+.force-table th,td{
+  border: 2px solid #ddd;
+  padding: 15px;
+}
+
+@media screen and (max-width:600px){
+
+.force-table{
+  padding-top: 10%;
+  margin-left: 10px;
+}
+
+}
+
+
+
+/*shrink-table*/
+.shrink-table{
+  overflow-x: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.shrink-table table{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.shrink-table th{
+  background-color: #29292A;
+  color: white;
+}
+
+.shrink-table th,td{
+  border: 2px solid #ddd;
+  padding: 15px;
+}
+
+@media screen and (max-width:600px){
+
+.shrink-table{
+  padding-top: 10%;
+  margin-left: 10px;
+}
+
+}
+
+
+/*button_2*/
+
+.button2 {
+    background-color: #183a5b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-left: 40%;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/* Style the sub buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 22px;
+    border: 2px solid grey;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+    background-color: #666;
+    color: white;
+}
+
+
+@media screen and (max-width:600px){
+.btn{
+  width: 150%;
+  margin-left: -120px;
+}
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 80%;
+    margin-top: 12px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20px 60px;
+    z-index: 1;
+    font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media screen and (max-width:600px){
+  .dropdown{
+    margin-left: 2%;
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+
+    <body style="background-image: url(icons/wall3.jpg);">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" style="background-color: #f1f1f1; color: #173579;font-size: 17px;" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="icons/IDO_01.png" height="100" width="170" class="img-responsive margin center-block" alt=""></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="margin-top: 23px;">
+      <a href="consumer.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONSUMER CHARTER</a>
+      <a href="contact.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONTACT US</a>
+      <a href="login.html" class="w3-bar-item w3-button" style="text-decoration: none;">LOG-OUT</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size: 20px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="consumer.html" onclick="w3_close()" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOG-OUT</a>
+
+</nav>
+
+
+<br><br><br><br><br><br>
+
+
+<div class="dropdown">
+  <span style="color: black; font-size: 20px;">Welcome User, &nbsp; <img src="icons/user.png" style="height: 40px; width: 40px;vertical-align:middle;"></span>
+  <div class="dropdown-content">
+    <p style="color: grey">UPASS</p>
+  </div>
+</div>
+
+
+  <div class="tabs">
+
+		<label for="show-menu" class="show-menu" style=" font-size: 20px;">Menu</label>
+    <input style="opacity: 0.1" type="checkbox" id="show-menu">
+		<ul class="navigation">
+			<li class="tablink"><a href="myplans.html"><b style="font-size: 15px;">MY PLAN</b></a></li>
+			<li class="tablink"><a href="order.html"><b style="font-size: 15px;">ORDER</b></a></li>
+			<li class="tablink"><a style="background: #dd3737" href="changeplan.html"><b style="font-size: 15px;">CHANGE PLAN</b></a></li>
+			<li class="tablink"><a href="lodge.html"><b style="font-size: 15px;">LODGE SERVICE REQUEST</b></a></li>
+		</ul>
+
+	</div>
+
+
+
+<div id="myDIV" style="margin-left: 33%; margin-top: 6%;">
+
+    <a href="javascript:void(0)" onclick="openCity(event, 'Mumbai');">
+  <button class="btn  active">EXTEND</button></a>
+     <a href="javascript:void(0)" onclick="openCity(event, 'Delhi');">
+  <button class="btn">FORECLOSE</button></a>
+   <a href="javascript:void(0)" onclick="openCity(event, 'Lucknow');">
+  <button class="btn">REDUCE</button></a>
+</div>
+
+	<!-- <div class="w3-row" style="margin-top: 8%">
+    <a href="javascript:void(0)" onclick="openCity(event, 'Mumbai');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="width: 20%;height: 10%"><button class="button5"><h5>EXTEND</h5></button></div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'Delhi');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="width: 20%"><button class="button5"><h5>FORECLOSE</h5></button></div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'Lucknow');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="width: 20%; padding-bottom: 40px;"><button class="button5"><h5>SHRINK</h5></button></div>
+    </a>
+  </div> -->
+
+
+<div id="Mumbai" class="w3-container city" style="display:none">
+
+<div class="extend-table" style="margin-top: 5%">
+      <table>
+        <tbody>
+          <tr>
+            <th>Select</th>
+            <th>My Packs/Channels</th>
+            <th>Valid Till</th>
+            <th>Extend Till</th>
+            <th>Fees</th>
+          </tr>
+
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>POWER-PACK/Karnataka Bouquet</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>53</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>MINI-PACK KANNADA</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>53.5</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>MINI-PACK MARATHI</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>69.5</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>Zee TV</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>19</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>&TV</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>17</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>Zee Cinema</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>17</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>Zee Bangal</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>19</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>Zee Telugu</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>19</b></td>
+          </tr>
+          <tr>
+            <td><b></b></td>
+            <td><b></b></td>
+            <td><b></b></td>
+            <td><b>TOTAL:</b></td>
+            <td><b></b></td>
+          </tr>
+        </tbody>
+      </table>
+      <label><b style="font-size: 20px; float: right; text-decoration: underline;margin-top: 10px;margin-right: 30px;">TOTAL:- 267/-</b></label>
+<br>
+
+
+    </div>
+    <a href="payment.html"><button class="button2" style="margin-top: 10px; margin-bottom: 50px;"><b>Extend</b></button></a>
+
+</div>
+
+
+<div id="Delhi" class="w3-container city" style="display:none">
+
+
+<div class="force-table" style="margin-top: 5%">
+      <table>
+        <tbody>
+          <tr>
+            <th>Sr No.</th>
+            <th>My Packs/Channels</th>
+            <th>Valid Till</th>
+            <th>Foreclose</th>
+            <th>Fees</th>
+          </tr>
+
+          <tr>
+            <td><b>1.</b></td>
+            <td><b>POWER-PACK</b></td>
+            <td><b></b></td>
+            <td style="text-align: center;"><input type="checkbox" name="chkbox"/></td>
+            <td><b></b></td>
+          </tr>
+          <tr>
+            <td><b>2.</b></td>
+            <td><b>MINI-PACK</b></td>
+            <td><b></b></td>
+            <td style="text-align: center;"><input type="checkbox" name="chkbox"/></td>
+            <td><b></b></td>
+          </tr>
+          <tr>
+            <td><b>3.</b></td>
+            <td><b>MINI-PACK</b></td>
+            <td><b></b></td>
+            <td style="text-align: center;"><input type="checkbox" name="chkbox"/></td>
+            <td><b></b></td>
+          </tr>
+          <tr>
+            <td><b>4.</b></td>
+            <td><b>CHANNEL</b></td>
+            <td><b></b></td>
+            <td style="text-align: center;"><input type="checkbox" name="chkbox"/></td>
+            <td><b></b></td>
+          </tr>
+          <tr>
+            <td><b>5.</b></td>
+            <td><b>CHANNEL</b></td>
+            <td><b></b></td>
+            <td style="text-align: center;"><input type="checkbox" name="chkbox"/></td>
+            <td><b></b></td>
+          </tr>
+          <tr>
+            <td><b></b></td>
+            <td><b></b></td>
+            <td><b></b></td>
+            <td><b>TOTAL:</b></td>
+            <td><b></b></td>
+          </tr>
+        </tbody>
+      </table>
+      <label><b style="font-size: 20px; float: right; text-decoration: underline;margin-top: 10px;margin-right: 30px;">TOTAL:- 235/-</b></label>
+<br>
+
+
+    </div>
+
+    <a href="payment.html"><button class="button2" style="margin-top: 10px; margin-bottom: 50px;"><b>Foreclose</b></button></a>
+
+
+</div>
+
+
+<div id="Lucknow" class="w3-container city" style="display:none">
+
+
+<div class="shrink-table" style="margin-top: 5%">
+      <table>
+        <tbody>
+          <tr>
+            <th>Select</th>
+            <th>My Packs/Channels</th>
+            <th>Valid Till</th>
+            <th>Reduce To</th>
+            <th>Fees</th>
+          </tr>
+
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>POWER-PACK/Karnataka Bouquet</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>53</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>MINI-PACK KANNADA</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>53.5</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>MINI-PACK MARATHI</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>69.5</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>Zee TV</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>19</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>&TV</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>17</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>Zee Cinema</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>17</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>Zee Bangal</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>19</b></td>
+          </tr>
+          <tr>
+            <td><b><input type="checkbox"></b></td>
+            <td><b>Zee Telugu</b></td>
+            <td><b></b></td>
+            <td><input type="date"></td>
+            <td><b>19</b></td>
+          </tr>
+          <tr>
+            <td><b></b></td>
+            <td><b></b></td>
+            <td><b></b></td>
+            <td><b>TOTAL:</b></td>
+            <td><b></b></td>
+          </tr>
+        </tbody>
+      </table>
+      <label><b style="font-size: 20px; float: right; text-decoration: underline;margin-top: 10px;margin-right: 30px;">TOTAL:- 291.8/-</b></label>
+<br>
+
+
+    </div>
+    <a href="payment.html"><button class="button2" style="margin-top: 10px; margin-bottom: 50px;"><b>Reduce</b></button></a>
+
+
+</div>
+
+<script>
+// Add active class to the current button (highlight it)
+ document.getElementsByClassName("w3-container city")[0].click();
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+  <script>
+  document.getElementsByClassName("btn")[0].click();
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-border-darkgrey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-darkgrey";
+
+}
+</script>
+
+
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+</body>
+</html>

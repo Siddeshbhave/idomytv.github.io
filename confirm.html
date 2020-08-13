@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>IDO</title>
+
+ <!-- nav -->
+      <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- nav -->
+
+<style>
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+.container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 50px;
+  margin: 16px 0
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+  .container {
+      text-align: center;
+      width: 100%;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+  <body style="background-image: url(icons/wall3.jpg);">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" style="background-color: #f1f1f1; color: #173579;font-size: 17px;" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="icons/IDO_01.png" height="90" width="170" class="img-responsive margin center-block" alt=""></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="margin-top: 23px;">
+      <a href="consumer.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONSUMER CHARTER</a>
+      <a href="contact.html" class="w3-bar-item w3-button" style="text-decoration: none;">CONTACT US</a>
+      <a href="login.html" class="w3-bar-item w3-button" style="text-decoration: none;">LOG-OUT</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars" style="font-size: 20px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="consumer.html" onclick="w3_close()" class="w3-bar-item w3-button">CONSUMER CHARTER</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOG-OUT</a>
+
+</nav>
+
+<br><br><br><br><br><br><br>
+
+<div class="container" style=" width: 100%;">
+  <!-- <img src="icons/IDO_01.png" alt="Avatar" style="width:100px;margin-left: 46%;"> -->
+  <h1 style="text-align: center;font-size: 50px;"><b style="color: #c52727">I<i style="color: #173579">DO</i></b></h1>
+
+  <p style="text-align: center; font-size: 20px;">Thank You for using <b style="color: #c52727">I<i style="color: #173579">DO</i></b>! Your order is under process.</p>
+  <p style="text-align: center; font-size: 20px;">If not processed in 72 hours, please Contact us.</p>
+  <p style="text-align: center; font-size: 20px;">Ticket No.: XXXXXXXX</p>
+
+  <h4 style="text-align: center;">Tap To:</h4>
+  <a href="tel:01234567890"><img style="margin-left: 40%;" src="icons/call1.png" height="10%"; width="70px"></a>
+  <a href="mailto:ravi@upass.cc"><img style="margin-left: 6%;" src="icons/mail.png" height="10%"; width="70px"></a>
+
+</div>
+
+
+
+
+  <script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
